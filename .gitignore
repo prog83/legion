@@ -1,0 +1,10 @@
+*.log
+.DS_Store
+node_modules
+dist
+
+# dotenv environment variables file
+.env*.local
+
+docker/mysql/
+docker/phpmyadmin/

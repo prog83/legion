@@ -1,0 +1,63 @@
+{
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "node ./dist",
+    "dev": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "legionua",
+  "author": "o.myronov.1607",
+  "module": "dist/legionua.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/legionua.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/legionua.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^4.12.0",
+    "husky": "^6.0.0",
+    "size-limit": "^4.12.0",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.3.0",
+    "typescript": "^4.3.4"
+  },
+  "dependencies": {
+    "@types/mysql": "^2.15.18",
+    "axios": "^0.21.1",
+    "dotenv": "^10.0.0",
+    "mysql": "^2.18.1",
+    "yup": "^0.32.9"
+  }
+}
